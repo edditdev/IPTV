@@ -310,7 +310,7 @@ Chiba	1	https://eddit.me/IPTV/channels/countries/jp-12.m3u
 
 ###  API Endpoint  
 The API allows you to fetch the latest IPTV channel list dynamically. You can use the following endpoint to retrieve the most up-to-date channel data:  
- **GET:** https://eddit.me/IPTV/GetAPI.php
+ **GET:** https://eddit.me/IPTV/API/GetAPI.php
 
 ### 📜 API Response Format  
 The API returns a JSON file containing all available channels. You can store this file or integrate it into your website or application.  
@@ -338,7 +338,7 @@ You can add this API to your website to generate a live channel list dynamically
 
 ```php
 <?php
-$json = file_get_contents("https://eddit.me/IPTV/GetAPI.php");
+$json = file_get_contents("https://eddit.me/IPTV/API/GetAPI.php");
 $data = json_decode($json, true);
 foreach ($data as $channel) {
     echo "<p>{$channel['name']} ({$channel['country']}) - <a href='{$channel['url']}'>Watch</a></p>";
